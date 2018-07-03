@@ -5,4 +5,4 @@ contract test {
     }
 }
 // ----
-// Warning: (70-72): Use of unary + is deprecated.
+// SyntaxError: (70-72): Use of unary + is disallowed.
