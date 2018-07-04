@@ -166,9 +166,6 @@ struct UserDefinedTypeNameAnnotation: TypeNameAnnotation
 
 struct VariableDeclarationStatementAnnotation: StatementAnnotation
 {
-	/// Information about which component of the value is assigned to which variable.
-	/// The pointer can be null to signify that the component is discarded.
-	std::vector<VariableDeclaration const*> assignments;
 };
 
 struct ExpressionAnnotation: ASTAnnotation
