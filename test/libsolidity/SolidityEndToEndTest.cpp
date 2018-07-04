@@ -12196,7 +12196,6 @@ BOOST_AUTO_TEST_CASE(abi_encode_call)
 BOOST_AUTO_TEST_CASE(staticcall_for_view_and_pure)
 {
 	char const* sourceCode = R"(
-		pragma experimental "v0.5.0";
 		contract C {
 			uint x;
 			function f() public returns (uint) {
