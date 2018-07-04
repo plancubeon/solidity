@@ -3,6 +3,7 @@
 How to update your code:
  * Change every ``.call()`` to a ``.call("")`` and every ``.call(signature, a, b, c)`` to use ``.call(abi.encodeWithSignature(signature, a, b, c))`` (the last one only works for value types).
  * Change every ``keccak256(a, b, c)`` to ``keccak256(abi.encodePacked(a, b, c))``.
+ * Add ``public`` to every function that doesn't specify its visibility already.
 
 
 Breaking Changes:
@@ -34,6 +35,7 @@ Breaking Changes:
  * Type Checker: Only accept a single ``bytes`` type for ``.call()`` (and family), ``keccak256()``, ``sha256()`` and ``ripemd160()``.
  * Remove obsolete ``std`` directory from the Solidity repository. This means accessing ``https://github.com/ethereum/soldity/blob/develop/std/*.sol`` (or ``https://github.com/ethereum/solidity/std/*.sol`` in Remix) will not be possible.
  * Syntax Checker: Named return values in function types are an error.
+ * Syntax Checker: Strictly enforce visibility specifier. This was already the case in the experimental 0.5.0 mode.
  * View Pure Checker: Strictly enfore state mutability. This was already the case in the experimental 0.5.0 mode.
 
 Language Features:
