@@ -131,10 +131,9 @@ a "message call") and external
 ones that do), there are four types of visibilities for
 functions and state variables.
 
-Functions can be specified as being ``external``,
-``public``, ``internal`` or ``private``, where the default is
-``public``. For state variables, ``external`` is not possible
-and the default is ``internal``.
+Functions have to be specified as being ``external``,
+``public``, ``internal`` or ``private``.
+For state variables, ``external`` is not possible.
 
 ``external``:
     External functions are part of the contract
