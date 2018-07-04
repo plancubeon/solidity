@@ -3,4 +3,4 @@ contract C {
     function f() public { var (,) = one(); }
 }
 // ----
-// TypeError: (81-96): Wildcard both at beginning and end of variable declaration list is only allowed if the number of components is equal.
+// TypeError: (81-96): Different number of components on the left hand side (2) than on the right hand side (1).

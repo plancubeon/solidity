@@ -7834,9 +7834,9 @@ BOOST_AUTO_TEST_CASE(multi_variable_declaration)
 				if (x != 1 || y != 2 || z != 3) return false;
 				(, uint a,) = g();
 				if (a != 2) return false;
-				(uint b,) = g();
+				(uint b, , ) = g();
 				if (b != 1) return false;
-				(, uint c) = g();
+				(, , uint c) = g();
 				if (c != 3) return false;
 				return true;
 			}

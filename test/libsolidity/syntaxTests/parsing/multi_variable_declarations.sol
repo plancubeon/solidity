@@ -11,5 +11,5 @@ contract C {
 	function g() pure public returns (uint, uint, uint) {}
 }
 // ----
-// Warning: (93-107): Different number of components on the left hand side (2) than on the right hand side (1).
-// Warning: (111-124): Different number of components on the left hand side (2) than on the right hand side (1).
+// TypeError: (93-107): Different number of components on the left hand side (2) than on the right hand side (1).
+// TypeError: (111-124): Different number of components on the left hand side (2) than on the right hand side (1).

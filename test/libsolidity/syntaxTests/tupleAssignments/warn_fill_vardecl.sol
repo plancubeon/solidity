@@ -5,4 +5,4 @@ contract C {
 	}
 }
 // ----
-// Warning: (76-99): Different number of components on the left hand side (3) than on the right hand side (4).
+// TypeError: (76-99): Different number of components on the left hand side (3) than on the right hand side (4).

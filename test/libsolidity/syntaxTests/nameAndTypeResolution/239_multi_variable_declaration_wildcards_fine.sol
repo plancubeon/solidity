@@ -13,7 +13,8 @@ contract C {
     }
 }
 // ----
-// Warning: (179-198): Different number of components on the left hand side (2) than on the right hand side (3).
-// Warning: (208-233): Different number of components on the left hand side (3) than on the right hand side (2).
-// Warning: (243-262): Different number of components on the left hand side (2) than on the right hand side (3).
-// Warning: (272-297): Different number of components on the left hand side (3) than on the right hand side (2).
+// TypeError: (179-198): Different number of components on the left hand side (2) than on the right hand side (3).
+// TypeError: (208-233): Different number of components on the left hand side (3) than on the right hand side (2).
+// TypeError: (243-262): Different number of components on the left hand side (2) than on the right hand side (3).
+// TypeError: (272-297): Different number of components on the left hand side (3) than on the right hand side (2).
+// TypeError: (335-350): Variable declaration statement does not declare any variables.
