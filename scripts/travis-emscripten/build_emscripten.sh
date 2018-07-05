@@ -59,7 +59,7 @@ fi
 
 # Boost
 echo -en 'travis_fold:start:compiling_boost\\r'
-cd "$WORKSPACE"/boost_1_57_0
+cd "$WORKSPACE"/boost_1_67_0
 # if b2 exists, it is a fresh checkout, otherwise it comes from the cache
 # and is already compiled
 test -e b2 && (
@@ -89,17 +89,17 @@ cmake \
   -DBoost_FOUND=1 \
   -DBoost_USE_STATIC_LIBS=1 \
   -DBoost_USE_STATIC_RUNTIME=1 \
-  -DBoost_INCLUDE_DIR="$WORKSPACE"/boost_1_57_0/ \
-  -DBoost_FILESYSTEM_LIBRARY="$WORKSPACE"/boost_1_57_0/libboost_filesystem.a \
-  -DBoost_FILESYSTEM_LIBRARIES="$WORKSPACE"/boost_1_57_0/libboost_filesystem.a \
-  -DBoost_PROGRAM_OPTIONS_LIBRARY="$WORKSPACE"/boost_1_57_0/libboost_program_options.a \
-  -DBoost_PROGRAM_OPTIONS_LIBRARIES="$WORKSPACE"/boost_1_57_0/libboost_program_options.a \
-  -DBoost_REGEX_LIBRARY="$WORKSPACE"/boost_1_57_0/libboost_regex.a \
-  -DBoost_REGEX_LIBRARIES="$WORKSPACE"/boost_1_57_0/libboost_regex.a \
-  -DBoost_SYSTEM_LIBRARY="$WORKSPACE"/boost_1_57_0/libboost_system.a \
-  -DBoost_SYSTEM_LIBRARIES="$WORKSPACE"/boost_1_57_0/libboost_system.a \
-  -DBoost_UNIT_TEST_FRAMEWORK_LIBRARY="$WORKSPACE"/boost_1_57_0/libboost_unit_test_framework.a \
-  -DBoost_UNIT_TEST_FRAMEWORK_LIBRARIES="$WORKSPACE"/boost_1_57_0/libboost_unit_test_framework.a \
+  -DBoost_INCLUDE_DIR="$WORKSPACE"/boost_1_67_0/ \
+  -DBoost_FILESYSTEM_LIBRARY="$WORKSPACE"/boost_1_67_0/libboost_filesystem.a \
+  -DBoost_FILESYSTEM_LIBRARIES="$WORKSPACE"/boost_1_67_0/libboost_filesystem.a \
+  -DBoost_PROGRAM_OPTIONS_LIBRARY="$WORKSPACE"/boost_1_67_0/libboost_program_options.a \
+  -DBoost_PROGRAM_OPTIONS_LIBRARIES="$WORKSPACE"/boost_1_67_0/libboost_program_options.a \
+  -DBoost_REGEX_LIBRARY="$WORKSPACE"/boost_1_67_0/libboost_regex.a \
+  -DBoost_REGEX_LIBRARIES="$WORKSPACE"/boost_1_67_0/libboost_regex.a \
+  -DBoost_SYSTEM_LIBRARY="$WORKSPACE"/boost_1_67_0/libboost_system.a \
+  -DBoost_SYSTEM_LIBRARIES="$WORKSPACE"/boost_1_67_0/libboost_system.a \
+  -DBoost_UNIT_TEST_FRAMEWORK_LIBRARY="$WORKSPACE"/boost_1_67_0/libboost_unit_test_framework.a \
+  -DBoost_UNIT_TEST_FRAMEWORK_LIBRARIES="$WORKSPACE"/boost_1_67_0/libboost_unit_test_framework.a \
   -DTESTS=0 \
   ..
 make -j 4
