@@ -70,6 +70,7 @@ private:
 	virtual bool visit(FunctionTypeName const& _node) override;
 
 	virtual bool visit(VariableDeclaration const& _declaration) override;
+	virtual bool visit(VariableDeclarationStatement const& _statement) override;
 
 	virtual bool visit(StructDefinition const& _struct) override;
 

@@ -269,6 +269,24 @@ bool SyntaxChecker::visit(VariableDeclaration const& _declaration)
 	return true;
 }
 
+bool SyntaxChecker::visit(VariableDeclarationStatement const& _statement)
+{
+	// Check if declaration contains at least one named component, and report otherwise.
+	size_t const namedVariablesCount = count_if(
+		_statement.declarations().begin(),
+		_statement.declarations().end(),
+		[](ASTPointer<VariableDeclaration> const& decl) { return decl.get() != nullptr; }
+	);
+
+	if (namedVariablesCount == 0)
+		m_errorReporter.syntaxError(
+			_statement.location(),
+			"Use of the \"var\" keyword is disallowed. Variable declaration statement also does not declare any variables."
+		);
+
+	return true;
+}
+
 bool SyntaxChecker::visit(StructDefinition const& _struct)
 {
 	if (_struct.members().empty())

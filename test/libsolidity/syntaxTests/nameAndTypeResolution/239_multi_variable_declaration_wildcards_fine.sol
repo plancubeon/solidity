@@ -13,6 +13,8 @@ contract C {
     }
 }
 // ----
+// SyntaxError: (307-325): Use of the "var" keyword is disallowed. Variable declaration statement also does not declare any variables.
+// SyntaxError: (335-350): Use of the "var" keyword is disallowed. Variable declaration statement also does not declare any variables.
 // Warning: (179-198): Different number of components on the left hand side (2) than on the right hand side (3).
 // Warning: (208-233): Different number of components on the left hand side (3) than on the right hand side (2).
 // Warning: (243-262): Different number of components on the left hand side (2) than on the right hand side (3).
