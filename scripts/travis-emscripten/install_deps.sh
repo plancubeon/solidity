@@ -35,6 +35,8 @@ wget 'https://sourceforge.net/projects/boost/files/boost/1.67.0/boost_1_67_0.tar
  -O - | tar xz
 cd boost_1_67_0
 ./bootstrap.sh --with-toolset=gcc
+wget 'https://raw.githubusercontent.com/tee3/boost-build-emscripten/master/emscripten.jam'
+echo "using emscripten : : em++ ;" >> project-config.jam
 )
 cd ..
 echo -en 'travis_fold:end:installing_dependencies\\r'

@@ -63,10 +63,7 @@ cd "$WORKSPACE"/boost_1_67_0
 # if b2 exists, it is a fresh checkout, otherwise it comes from the cache
 # and is already compiled
 test -e b2 && (
-sed -i 's|using gcc ;|using gcc : : em++ ;|g' ./project-config.jam
-sed -i 's|$(archiver\[1\])|emar|g' ./tools/build/src/tools/gcc.jam
-sed -i 's|$(ranlib\[1\])|emranlib|g' ./tools/build/src/tools/gcc.jam
-./b2 link=static variant=release threading=single runtime-link=static \
+./b2 toolset=emscripten link=static variant=release threading=single runtime-link=static \
        system regex filesystem unit_test_framework program_options
 find . -name 'libboost*.a' -exec cp {} . \;
 rm -rf b2 libs doc tools more bin.v2 status
