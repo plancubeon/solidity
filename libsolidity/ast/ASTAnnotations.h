@@ -164,10 +164,6 @@ struct UserDefinedTypeNameAnnotation: TypeNameAnnotation
 	ContractDefinition const* contractScope = nullptr;
 };
 
-struct VariableDeclarationStatementAnnotation: StatementAnnotation
-{
-};
-
 struct ExpressionAnnotation: ASTAnnotation
 {
 	/// Inferred type of the expression.
