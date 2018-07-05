@@ -1814,9 +1814,7 @@ void ExpressionCompiler::appendExternalFunctionCall(
 	bool returnSuccessCondition = funKind == FunctionType::Kind::BareCall || funKind == FunctionType::Kind::BareCallCode || funKind == FunctionType::Kind::BareDelegateCall;
 	bool isCallCode = funKind == FunctionType::Kind::BareCallCode || funKind == FunctionType::Kind::CallCode;
 	bool isDelegateCall = funKind == FunctionType::Kind::BareDelegateCall || funKind == FunctionType::Kind::DelegateCall;
-	bool useStaticCall =
-		_functionType.stateMutability() <= StateMutability::View &&
-		m_context.evmVersion().hasStaticCall();
+	bool useStaticCall = _functionType.stateMutability() <= StateMutability::View && m_context.evmVersion().hasStaticCall();
 
 	bool haveReturndatacopy = m_context.evmVersion().supportsReturndata();
 	unsigned retSize = 0;
